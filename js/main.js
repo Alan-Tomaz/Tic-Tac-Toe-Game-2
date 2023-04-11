@@ -22,8 +22,14 @@
          if (playerHasWon() !== false) {
              playerText.innerHTML = `${currentPlayer} has won!`;
              let winningBlocks = playerHasWon();
-
              winningBlocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
+             console.log(spaces);
+             for (let i = 0; i <= 8; i++) {
+                 if (spaces[i] == null) {
+                     spaces[i] = "END";
+                 }
+
+             }
              return;
          }
 
